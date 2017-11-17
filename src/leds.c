@@ -62,9 +62,9 @@ void set_led(unsigned int led_number, unsigned int value)
 void set_body_led(unsigned int value)
 {
 	if(value>1)
-		palTogglePad(GPIOD, GPIOD_LED_BODY);
+		palTogglePad(GPIOB, GPIOB_LED_BODY);
 	else
-		value?palSetPad(GPIOD, GPIOD_LED_BODY):palClearPad(GPIOD, GPIOD_LED_BODY);
+		value?palSetPad(GPIOB, GPIOB_LED_BODY):palClearPad(GPIOB, GPIOB_LED_BODY);
 }
 
 /*! \brief turn on/off the front LED

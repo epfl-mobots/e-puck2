@@ -10,7 +10,7 @@ void panic_handler(const char *reason)
 	palClearPad(GPIOD, GPIOD_LED5);
 	palClearPad(GPIOD, GPIOD_LED7);
 	palClearPad(GPIOD, GPIOD_LED_FRONT);
-	palClearPad(GPIOD, GPIOD_LED_BODY);	
+	palClearPad(GPIOB, GPIOB_LED_BODY);
 	
     while (true) {
 

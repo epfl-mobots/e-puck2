@@ -231,7 +231,7 @@ static THD_FUNCTION(selector_thd, arg)
 				//chprintf((BaseSequentialStream *)&SDU1, "sdState=%d\r\n", sdState);
 				switch(sdState) {
 					case 0:
-						palSetPadMode(GPIOC, GPIOC_MIC_SPI3_SCK, PAL_STM32_MODE_ALTERNATE | PAL_STM32_OTYPE_PUSHPULL | PAL_STM32_PUDR_PULLUP | PAL_STM32_OSPEED_HIGHEST | PAL_STM32_ALTERNATE(12));
+						palSetPadMode(GPIOC, GPIOC_SDIO_CLK, PAL_STM32_MODE_ALTERNATE | PAL_STM32_OTYPE_PUSHPULL | PAL_STM32_PUDR_PULLUP | PAL_STM32_OSPEED_HIGHEST | PAL_STM32_ALTERNATE(12));
 						sdcard_start();
 						sdState = 1;
 						break;
